@@ -13,7 +13,7 @@
 #define LORA_TX 43
 #define LORA_RX 44
 
-#define INTERNAL_ADC_PIN 5 // Kembali ke pin 5 untuk ADC Internal ESP32
+#define INTERNAL_ADC_PIN 5 
 
 // ================= ADS =================
 #define ADS1_ADDR 0x48 
@@ -32,8 +32,8 @@ struct __attribute__((packed)) DataLog {
   int16_t v2_raw;      // 2 bytes
   int16_t v3_raw;      // 2 bytes
   int16_t v_internal;  // 2 bytes
-  uint8_t padding[14]; // 14 bytes (Digeser ke atas crc)
-  uint16_t crc;        // 2 bytes (🔥 WAJIB ADA DI PALING BAWAH!)
+  uint8_t padding[14]; // 14 bytes 
+  uint16_t crc;        // 2 bytes 
 };
 
 // ================= GLOBAL =================
@@ -134,7 +134,7 @@ void taskADC(void *param) {
     if (now - lastSample >= SAMPLE_US) {
       lastSample = now;
 
-      DataLog log = {0}; // 🔥 Pastikan inisialisasi dengan 0 agar padding bersih
+      DataLog log = {0}; 
       log.counter = globalCounter++;
       log.time_us = now;
 
@@ -211,12 +211,12 @@ void setup() {
   auto initADS = [](uint8_t addr) {
     Wire.beginTransmission(addr);
     Wire.write(0x01); // Menunjuk ke Config Register
-    Wire.write(0xD2); // 🔥 DIUBAH DARI 0xC2 KE 0xD2 (MUX diubah agar membaca AIN1)
-    Wire.write(0xE3); // Data Rate (860 SPS) dll
+    Wire.write(0xD2); // Channel AIN1
+    Wire.write(0xE3); // Data Rate (860 SPS)
     Wire.endTransmission();
 
     Wire.beginTransmission(addr);
-    Wire.write(0x00); // Kembali menunjuk ke Conversion Register untuk proses baca
+    Wire.write(0x00); 
     Wire.endTransmission();
   };
 
