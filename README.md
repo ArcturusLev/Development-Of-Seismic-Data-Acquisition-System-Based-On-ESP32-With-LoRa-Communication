@@ -2,11 +2,12 @@ This project purpose is to make an alternative seismic data acquisition with low
 This device have 2 main process configured in microcontroller which is acquisition data and transmitting data to wireless communication LoRa. 
 Acquisition data collect the data sample 833 sample per second and store the data in data logger with same amount of sample.
 
-**================SPECIFICATION================
+**================SPECIFICATION================**
 Processor: ESP32 Wroom S3 
 ADC: ADS1115
 Data Logger: Flash Memory or SD Card
-Wireless Communication: LoRa (E220-900t22d)**
+Wireless Communication: LoRa (E220-900t22d)
+**=============================================**
 
 WORKFLOW
 1. Data Acquisition
