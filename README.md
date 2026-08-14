@@ -52,11 +52,10 @@ Sistem dirancang menggunakan **ESP32-S3 WROOM**, tiga buah **ADC 16-bit ADS1115*
 
 ## 📸 Dokumentasi Perangkat Keras & Visualisasi
 
-> *Simpan foto-foto proyek Anda di folder `docs/images/` untuk menampilkan gambar di bawah ini:*
 
 |<img src="docs/images/pcb_board.png" width="400" alt="Main PCB DAQ"/><br>**1. Board Utama DAQ PCB (SMD)** | <img src="docs/images/full_system.png" width="400" alt="Full System Enclosure"/><br>**2. Integrasi Keseluruhan Sistem & Box Enclosure** |
 |:---:|:---:|
-|<img src="docs/images/receiver_board.png" width="400" alt="RP2040 LoRa Receiver"/><br>**3. Gateway Receiver (RP2040 + LoRa)** | <img src="docs/images/signal_plot.png" width="400" alt="Realtime Waveform Plot"/><br>**4. Perekaman Sinyal Real-time (SerialPlot)** |
+|<img src="docs/images/receiver_board.png" width="400" alt="reciever"/><br>**3. Gateway Receiver (RP2040 + LoRa)** | <img src="docs/images/signal_plot.png" width="400" alt="Realtime Waveform Plot"/><br>**4. Perekaman Sinyal Real-time (SerialPlot)** |
 
 ---
 
